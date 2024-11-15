@@ -16,7 +16,7 @@ print(df.head())
 print(df.info())
 print(df.describe())
 
-# Seleccionar solo las columnas numéricas para realizar análisis
+# Seleccionamos solo las columnas numéricas para realizar análisis
 numeric_df = df.select_dtypes(include=[np.number])
 
 # Correlación entre las variables numéricas
@@ -24,6 +24,6 @@ correlation_matrix = numeric_df.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
 plt.show()
 
-# Graficar la distribución de las variables numéricas
+# Graficamos la distribución de las variables numéricas
 numeric_df.hist(bins=20, figsize=(10, 8))
 plt.show()
